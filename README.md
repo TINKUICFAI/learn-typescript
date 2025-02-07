@@ -210,3 +210,88 @@ tsconfig.json helps configure the compiler settings.
 💡 Tomorrow: We’ll dive into TypeScript data types (string, number, boolean, arrays, tuples, and enums). 🎯
 
 🔥 Let me know once you've completed today's tasks, and we’ll move to Day 2! 🚀
+
+📅 Day 2: Understanding TypeScript Data Types
+📍 Today's Goal: Learn about TypeScript’s primitive data types and how to use them.
+
+🛠 Step 1: Primitive Data Types in TypeScript
+TypeScript provides static typing, which helps catch errors early. Here are the key data types:
+
+Data Type	Example	Description
+string	"Hello, TypeScript!"	Text-based data
+number	42, 3.14	Integer & floating-point numbers
+boolean	true, false	True or false values
+any	let x: any = 5;	Can hold any type (avoid using it)
+unknown	let x: unknown;	Safer alternative to any
+null / undefined	null, undefined	Represents empty values
+void	function log(): void { console.log("Hi!"); }	Used for functions that don’t return anything
+🛠 Step 2: Writing TypeScript with Data Types
+📌 Create a new file: dataTypes.ts
+Add the following code:
+
+ts
+Copy
+Edit
+// String Type
+let firstName: string = "John";
+console.log(`Hello, ${firstName}!`);
+
+// Number Type
+let age: number = 25;
+console.log(`Age: ${age}`);
+
+// Boolean Type
+let isDeveloper: boolean = true;
+console.log(`Is Developer: ${isDeveloper}`);
+
+// Any Type (Avoid using it)
+let anything: any = "I can be anything!";
+anything = 42; // No error (but should be avoided)
+console.log(anything);
+
+// Unknown Type (Safer alternative to `any`)
+let value: unknown;
+value = "Hello";
+value = 100;
+
+// Void Type (Used in functions that don’t return a value)
+function logMessage(): void {
+  console.log("This is a log message.");
+}
+
+// Null & Undefined
+let emptyValue: null = null;
+let notAssigned: undefined = undefined;
+
+logMessage();
+🛠 Step 3: Compile and Run
+Run the following commands:
+
+sh
+Copy
+Edit
+tsc dataTypes.ts  # Compile TypeScript to JavaScript
+node dataTypes.js # Run the compiled JavaScript
+Expected Output:
+
+sh
+Copy
+Edit
+Hello, John!
+Age: 25
+Is Developer: true
+I can be anything!
+This is a log message.
+📌 Task for Today
+✅ Learn about primitive data types in TypeScript.
+✅ Write & test a TypeScript script using different data types.
+✅ Compile & run your TypeScript program.
+
+🔍 Review & Notes
+TypeScript enforces type safety, preventing common errors.
+any type removes type safety (avoid it).
+unknown is a better alternative to any.
+void is used for functions that don’t return values.
+🔥 Tomorrow (Day 3): We’ll explore functions in TypeScript, function overloading, and arrow functions! 🚀
+
+💡 Let me know once you've completed today’s tasks, and we’ll move to Day 3! 🎯
